@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вступить — Русское спортивное общество</title>
+  <meta name="description" content="Анкета для вступления в Русское спортивное общество для физических и юридических лиц.">
+  <meta name="theme-color" content="#13233f">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="join">
+  <div id="site-header"></div>
+  <main>
+    <section class="page-hero">
+      <img class="page-hero-mark" src="assets/img/logo-mark-light.png" alt="">
+      <div class="wrap">
+        <nav class="breadcrumbs"><a href="index.html">Главная</a><span>Вступить в РСО</span></nav>
+        <h1 class="h1">Вступить в Русское спортивное общество</h1>
+        <p class="lead">Заполните анкету. Мы рассмотрим заявку, свяжемся с вами и пришлём ссылку на оплату членского взноса.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap join-grid">
+        <div>
+          <div class="tabs" role="tablist">
+            <button class="tab is-active" type="button" role="tab" data-type="person">Физическое лицо</button>
+            <button class="tab" type="button" role="tab" data-type="company">Юридическое лицо</button>
+          </div>
+
+          <form id="join-form" class="form-grid">
+            <input type="hidden" name="member_type" value="person">
+
+            <h2 class="form-section-title">Контактное лицо</h2>
+            <div class="field"><label for="f-name">ФИО *</label><input id="f-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="f-phone">Телефон *</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7" required></div>
+            <div class="field"><label for="f-email">Email *</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="f-city">Город</label><input id="f-city" name="city" autocomplete="address-level2"></div>
+
+            <div class="field" data-for="person"><label for="f-job">Место работы</label><input id="f-job" name="job" autocomplete="organization"></div>
+            <div class="field" data-for="person"><label for="f-role">Роль в спорте</label>
+              <select id="f-role" name="role">
+                <option value="">Выберите</option>
+                <option>Руководитель / владелец</option>
+                <option>Менеджер</option>
+                <option>Эксперт / консультант</option>
+                <option>Профессиональный спортсмен</option>
+                <option>Тренер</option>
+                <option>Другое</option>
+              </select>
+            </div>
+
+            <h2 class="form-section-title" data-for="company" hidden>Организация</h2>
+            <div class="field" data-for="company" hidden><label for="f-org">Название организации *</label><input id="f-org" name="org" autocomplete="organization" required></div>
+            <div class="field" data-for="company" hidden><label for="f-inn">ИНН *</label><input id="f-inn" name="inn" inputmode="numeric" pattern="[0-9]{10}|[0-9]{12}" title="10 или 12 цифр" required></div>
+            <div class="field" data-for="company" hidden><label for="f-position">Ваша должность</label><input id="f-position" name="position" autocomplete="organization-title"></div>
+            <div class="field" data-for="company" hidden><label for="f-orgtype">Тип организации</label>
+              <select id="f-orgtype" name="org_type">
+                <option value="">Выберите</option>
+                <option>Клуб / лига / федерация</option>
+                <option>Компания / бренд</option>
+                <option>Фитнес-клуб / сеть</option>
+                <option>Технологическая компания</option>
+                <option>Агентство / медиа</option>
+                <option>Образовательная организация</option>
+                <option>Фонд / НКО</option>
+                <option>Другое</option>
+              </select>
+            </div>
+            <div class="field full" data-for="company" hidden><label for="f-site">Сайт компании</label><input id="f-site" name="website" type="url" placeholder="https://"></div>
+
+            <div class="field full"><label for="f-interest">Какой проект Общества вам наиболее интересен?</label>
+              <select id="f-interest" name="interest"><option value="">Все направления</option></select>
+            </div>
+            <div class="field full"><label for="f-about">Расскажите о себе и о том, чего вы ждёте от Общества</label><textarea id="f-about" name="about"></textarea></div>
+
+            <label class="check"><input type="checkbox" name="consent" required> <span>Я даю согласие на обработку персональных данных в соответствии с <a href="privacy.html" target="_blank">политикой конфиденциальности</a>.</span></label>
+
+            <div class="form-actions">
+              <button class="btn btn-navy" type="submit">Отправить анкету</button>
+              <p class="form-status" role="status"></p>
+            </div>
+          </form>
+
+          <div class="form-done" role="status">
+            <span class="eyebrow">Заявка отправлена</span>
+            <h2 class="h2" style="margin-top:18px">Спасибо! Мы получили вашу анкету.</h2>
+            <p class="lead" style="margin-top:16px">Мы рассмотрим её в течение нескольких рабочих дней и пришлём на email ссылку на оплату членского взноса. А пока — подпишитесь на наши каналы.</p>
+            <div class="socials socials-mount socials-dark" style="margin-top:24px"></div>
+          </div>
+        </div>
+
+        <aside class="aside-card">
+          <h3>Как стать участником</h3>
+          <ol class="steps" style="margin-top:28px">
+            <li><b>Анкета</b><span>Заполните форму — это займёт 3 минуты.</span></li>
+            <li><b>Рассмотрение</b><span>Мы свяжемся с вами и ответим на вопросы.</span></li>
+            <li><b>Членский взнос</b><span>Оплата онлайн картой или по счёту для юрлиц.</span></li>
+            <li><b>Добро пожаловать</b><span>Вы получаете РСО ID и доступ к проектам Общества.</span></li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/news.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
