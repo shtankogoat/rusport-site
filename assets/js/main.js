@@ -4,6 +4,7 @@
   var PROJECTS = window.RSO_PROJECTS || [];
   var AUDIENCES = window.RSO_AUDIENCES || [];
   var SOCIAL = window.RSO_SOCIAL || {};
+  var LANG = (window.RSO_I18N && window.RSO_I18N.lang) || "ru";
 
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
   var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
@@ -103,10 +104,19 @@
       '<a class="btn btn-gold nav-join" href="join.html">Вступить в РСО</a>' +
       "</nav>" +
       '<a class="btn btn-gold header-cta" href="join.html">Вступить</a>' +
+      '<div class="lang-switch" role="group" aria-label="Язык / Language" data-no-i18n>' +
+      '<button type="button" data-lang="ru"' + (LANG === "ru" ? ' class="is-active" aria-pressed="true"' : ' aria-pressed="false"') + ">РУ</button>" +
+      '<button type="button" data-lang="en"' + (LANG === "en" ? ' class="is-active" aria-pressed="true"' : ' aria-pressed="false"') + ">EN</button>" +
+      "</div>" +
       '<button class="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="nav"><span></span></button>' +
       "</div></header>";
 
     var header = $("#top-header");
+    $$(".lang-switch button", header).forEach(function (b) {
+      b.addEventListener("click", function () {
+        if (b.dataset.lang !== LANG && window.RSO_I18N) window.RSO_I18N.setLang(b.dataset.lang);
+      });
+    });
     var burger = $(".burger", header);
     burger.addEventListener("click", function () {
       var open = document.body.classList.toggle("nav-open");
@@ -176,9 +186,11 @@
   }
 
   var MONTHS = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"];
+  var MONTHS_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   function fmtDate(iso) {
     var p = String(iso || "").split("-");
-    return p.length === 3 ? +p[2] + " " + MONTHS[+p[1] - 1] + " " + p[0] : "";
+    if (p.length !== 3) return "";
+    return LANG === "en" ? MONTHS_EN[+p[1] - 1] + " " + +p[2] + ", " + p[0] : +p[2] + " " + MONTHS[+p[1] - 1] + " " + p[0];
   }
 
   function newsCard(n) {
@@ -517,5 +529,6 @@
     loadPhotos(document);
     initSubscribe();
     observeReveal();
+    if (window.RSO_I18N) window.RSO_I18N.apply(document.body);
   });
 })();

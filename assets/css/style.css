@@ -183,6 +183,24 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 .nav a:hover, .nav a.is-active { opacity: 1; border-bottom-color: var(--gold-light); }
 .header-cta { min-height: 42px; padding: 0 20px; font-size: 13px; }
+.lang-switch { display: flex; flex: none; padding: 3px; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 6px; }
+.lang-switch button {
+  min-width: 38px;
+  height: 34px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: var(--head);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.lang-switch button:hover { color: var(--white); }
+.lang-switch button.is-active { background: var(--white); color: var(--navy); cursor: default; }
 
 .burger {
   display: none;
@@ -214,7 +232,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
 @media (max-width: 1100px) {
   :root { --header-h: 70px; }
   .brand img { width: 52px; }
-  .burger { display: block; }
+  .burger { display: block; margin-left: 10px; }
+  .lang-switch { margin-left: auto; }
   .header-cta { display: none; }
   .nav {
     position: fixed;
