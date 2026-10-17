@@ -5,3 +5,6 @@ exportoftgchatRSS.html
 *.pdf
 __pycache__/
 .env
+
+# Django backend — kept in its own private repo (shtankogoat/rusport-backend)
+backend/

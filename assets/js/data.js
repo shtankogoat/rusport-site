@@ -172,6 +172,5 @@ window.RSO_SOCIAL = {
   vk: "https://vk.ru/ru_sport_org"
 };
 
-// Paste the URL of your form handler (e.g. a CRM webhook) to receive join/subscribe requests.
-// While empty, forms show a "test mode" notice instead of pretending the request was sent.
+// Forms post to the Django backend (/api/forms/) automatically. Set a URL here only to send them elsewhere.
 window.RSO_FORM_ENDPOINT = "";

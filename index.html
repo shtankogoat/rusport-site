@@ -8,136 +8,102 @@
   <meta property="og:title" content="Русское спортивное общество">
   <meta property="og:description" content="Объединяем тех, кто делает российский спорт сильнее.">
   <meta property="og:image" content="assets/img/og.jpg">
-  <meta property="og:url" content="https://rusport.org/">
   <meta name="theme-color" content="#13233f">
   <link rel="icon" href="assets/img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500;600;700;800&family=Roboto:wght@400;500&family=Cormorant+Garamond:ital,wght@0,700;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body data-page="home">
+<body data-page="home" class="page-home">
   <div id="site-header"></div>
 
   <main>
-    <!-- Hero slider: актуальные проекты. Добавляйте/меняйте слайды прямо здесь. -->
+    <!-- Баннерный слайдер: фото 1920×800 в assets/img/photos/hero-1.jpg, hero-2.jpg, hero-3.jpg -->
     <section class="hero" aria-roledescription="carousel" aria-label="Главное">
-      <div class="hero-grain"></div>
-      <svg class="hero-tracks" viewBox="0 0 1600 360" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M-20 340 C 360 300, 760 120, 1620 40"/>
-        <path d="M-20 352 C 380 318, 800 160, 1620 90"/>
-        <path d="M-20 360 C 400 336, 840 200, 1620 140"/>
-      </svg>
-
-      <div class="slides">
-        <article class="slide is-active">
-          <div class="wrap slide-inner">
-            <div class="slide-copy">
-              <span class="eyebrow">Русское спортивное общество</span>
-              <h1 class="h-display">Спорт — как национальная идея <em>России</em></h1>
-              <p>Объединяем тех, кто делает российский спорт сильнее. Здоровая нация — сильная нация.</p>
-              <div class="slide-actions">
-                <a class="btn btn-gold" href="join.html">Вступить в общество</a>
-                <a class="btn btn-ghost" href="#projects">Наши проекты</a>
-              </div>
+      <div class="hero-slides">
+        <article class="hero-slide is-active">
+          <div class="photo" data-photo="hero-1"></div>
+          <div class="wrap hero-content">
+            <span class="kicker">Русское спортивное общество</span>
+            <h1 class="title-xl">Спорт — национальная идея <span>России</span></h1>
+            <p>Объединяем тех, кто делает российский спорт сильнее. Здоровая нация — сильная нация.</p>
+            <div class="hero-actions">
+              <a class="btn btn-gold" href="join.html">Вступить в общество</a>
+              <a class="btn btn-light" href="#projects">Наши проекты</a>
             </div>
-            <div class="slide-visual"><img src="assets/img/logo-mark-light.png" alt="" width="310" height="252"></div>
           </div>
         </article>
 
-        <article class="slide" aria-hidden="true">
-          <div class="wrap slide-inner">
-            <div class="slide-copy">
-              <span class="eyebrow">Ноябрь 2026</span>
-              <h2 class="h-display">Презентация Общества <em>всему рынку</em></h2>
-              <p>Представим РСО, его проекты и первых участников. Заполните анкету, чтобы получить приглашение.</p>
-              <div class="slide-actions">
-                <a class="btn btn-gold" href="join.html">Получить приглашение</a>
-              </div>
+        <article class="hero-slide" aria-hidden="true">
+          <div class="photo" data-photo="hero-2"></div>
+          <div class="wrap hero-content">
+            <span class="kicker">Ноябрь 2026</span>
+            <h2 class="title-xl">Презентация Общества <span>всему рынку</span></h2>
+            <p>Представим РСО, его проекты и первых участников. Заполните анкету, чтобы получить приглашение.</p>
+            <div class="hero-actions">
+              <a class="btn btn-gold" href="join.html">Получить приглашение</a>
             </div>
-            <div class="slide-visual"><div class="slide-date"><b>XI</b><span>2026</span></div></div>
           </div>
         </article>
 
-        <article class="slide" aria-hidden="true">
-          <div class="wrap slide-inner">
-            <div class="slide-copy">
-              <span class="eyebrow">Приём заявок открыт</span>
-              <h2 class="h-display">Станьте <em>основателем</em> сообщества</h2>
-              <p>Клубы, лиги, федерации, компании, менеджеры и спортсмены — платформа, где встречаются заказчики и исполнители индустрии спорта.</p>
-              <div class="slide-actions">
-                <a class="btn btn-gold" href="join.html">Заполнить анкету</a>
-                <a class="btn btn-ghost" href="#members">Что вы получите</a>
-              </div>
+        <article class="hero-slide" aria-hidden="true">
+          <div class="photo" data-photo="hero-3"></div>
+          <div class="wrap hero-content">
+            <span class="kicker">Приём заявок открыт</span>
+            <h2 class="title-xl">Станьте частью <span>сообщества</span></h2>
+            <p>Клубы, лиги, федерации, компании, менеджеры и спортсмены — платформа, где встречаются заказчики и исполнители индустрии спорта.</p>
+            <div class="hero-actions">
+              <a class="btn btn-gold" href="join.html">Заполнить анкету</a>
+              <a class="btn btn-light" href="#members">Что вы получите</a>
             </div>
-            <div class="slide-visual"><img src="assets/img/logo-mark-light.png" alt="" width="310" height="252"></div>
-          </div>
-        </article>
-
-        <article class="slide" aria-hidden="true">
-          <div class="wrap slide-inner">
-            <div class="slide-copy">
-              <span class="eyebrow">Медиа РСО</span>
-              <h2 class="h-display">Новости индустрии <em>каждый день</em></h2>
-              <p>Кейсы, аналитика, технологии и главные события российского спорта — в наших каналах.</p>
-              <div class="slide-actions">
-                <a class="btn btn-gold" href="news.html">Читать новости</a>
-              </div>
-            </div>
-            <div class="slide-visual"><div class="slide-social socials-mount"></div></div>
           </div>
         </article>
       </div>
 
-      <div class="hero-controls">
+      <div class="hero-bar">
         <div class="wrap">
-          <div class="hero-dots"></div>
+          <div class="hero-progress"></div>
           <span class="hero-count"></span>
           <div class="hero-arrows">
-            <button class="hero-arrow hero-prev" type="button" aria-label="Предыдущий слайд"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 12H5M11 6l-6 6 6 6"/></svg></button>
-            <button class="hero-arrow hero-next" type="button" aria-label="Следующий слайд"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+            <button class="round-btn hero-prev" type="button" aria-label="Предыдущий слайд"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 12H5M11 6l-6 6 6 6"/></svg></button>
+            <button class="round-btn hero-next" type="button" aria-label="Следующий слайд"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
           </div>
         </div>
       </div>
     </section>
-
-    <div class="motto" aria-hidden="true">
-      <div class="motto-track">
-        <span>Здоровая нация — сильная нация</span><span>Усиливая индустрию — мы усиливаем страну</span><span>Люди · Организации · Бизнес · Спорт</span>
-        <span>Здоровая нация — сильная нация</span><span>Усиливая индустрию — мы усиливаем страну</span><span>Люди · Организации · Бизнес · Спорт</span>
-      </div>
-    </div>
 
     <!-- Наши проекты -->
     <section class="section" id="projects">
       <div class="wrap">
         <div class="section-head">
           <div>
-            <span class="eyebrow">Наши проекты</span>
-            <h2 class="h2">Девять направлений — одна индустрия</h2>
+            <h2 class="h2">Наши проекты</h2>
+            <p class="lead">РСО находится между государством и бизнесом и создаёт платформу, где встречаются заказчики и исполнители спортивной отрасли.</p>
           </div>
-          <p class="lead">РСО находится между государством и бизнесом и создаёт платформу, где встречаются заказчики и исполнители спортивной отрасли.</p>
         </div>
-        <div class="projects-grid" id="projects-grid"></div>
+        <div class="grid-3" id="projects-grid"></div>
       </div>
     </section>
 
-    <!-- Инфраструктура диалога -->
-    <section class="section section-navy" id="about">
+    <!-- Инфраструктура диалога: фон assets/img/photos/dialog.jpg -->
+    <section class="bleed" id="about">
+      <div class="photo" data-photo="dialog"></div>
       <div class="wrap">
-        <span class="eyebrow">Инфраструктура диалога со спортивной страной</span>
-        <p class="dialog-quote reveal" style="margin-top:28px">РСО не просит «поддержать сообщество». Оно даёт <em>инструмент</em>, который помогает видеть отрасль, слышать людей и реализовывать инициативы.</p>
+        <span class="kicker" style="color:var(--gold-light)">Об обществе</span>
+        <h2 class="bleed-title">Инфраструктура диалога со спортивной страной</h2>
+        <p class="lead" style="max-width:720px">РСО не просит «поддержать сообщество». Оно даёт инструмент, который помогает видеть отрасль, слышать людей и реализовывать инициативы.</p>
         <div class="pillars">
           <div class="pillar reveal">
-            <h3 class="pillar-word">Слышать</h3>
+            <h3>Слышать</h3>
             <p>Комитеты, региональная сеть и сообщество дают постоянный канал обратной связи от отрасли и людей спорта.</p>
           </div>
           <div class="pillar reveal">
-            <h3 class="pillar-word">Знать</h3>
+            <h3>Знать</h3>
             <p>Исследования, индексы и ежегодный доклад дают объективную картину состояния спортивной индустрии.</p>
           </div>
           <div class="pillar reveal">
-            <h3 class="pillar-word">Делать</h3>
+            <h3>Делать</h3>
             <p>РСО объединяет государство, бизнес и спорт вокруг конкретных проектов национального и регионального масштаба.</p>
           </div>
         </div>
@@ -145,85 +111,67 @@
     </section>
 
     <!-- Вступить -->
-    <section class="join-band">
-      <img class="join-band-mark" src="assets/img/logo-mark-light.png" alt="">
+    <section class="band band-gold">
       <div class="wrap">
         <div>
-          <h2 class="h2">Вступить в Русское спортивное общество</h2>
+          <h2 class="band-title">Вступить в Русское спортивное общество</h2>
           <p>Для физических и юридических лиц. Анкета займёт 3 минуты.</p>
         </div>
-        <a class="btn" href="join.html">Заполнить анкету <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        <a class="btn" href="join.html">Заполнить анкету <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
       </div>
     </section>
 
-    <!-- Будь в курсе событий -->
-    <section class="section section-ivory" id="news">
+    <!-- Главные новости -->
+    <section class="section" id="news">
       <div class="wrap">
         <div class="section-head">
-          <div>
-            <span class="eyebrow">Будь в курсе событий</span>
-            <h2 class="h2">Новости индустрии</h2>
-          </div>
-          <a class="link-arrow" href="news.html" style="justify-self:end">Все новости <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+          <h2 class="h2">Главные новости</h2>
+          <a class="more-link" href="news.html">Все новости <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
         </div>
         <div class="news-grid" id="news-grid"></div>
-
-        <div class="news-follow reveal">
-          <div>
-            <h3>Подпишитесь на РСО</h3>
-            <p>Главное об индустрии спорта — в наших каналах и в рассылке.</p>
-            <div class="socials socials-mount"></div>
-          </div>
-          <form class="subscribe-form">
-            <div class="subscribe">
-              <label class="sr-only" for="sub-email">Email</label>
-              <input id="sub-email" type="email" name="email" placeholder="Ваш email" required>
-              <button class="btn btn-gold" type="submit">Подписаться</button>
-            </div>
-            <p class="form-note">Нажимая кнопку, вы соглашаетесь с <a href="privacy.html">политикой обработки персональных данных</a>.</p>
-            <p class="form-status" role="status"></p>
-          </form>
-        </div>
       </div>
     </section>
 
-    <!-- Две идеи -->
-    <section class="section section-ivory" style="padding-top:0">
+    <!-- Две идеи: фото idea-state.jpg, idea-life.jpg -->
+    <section class="section section-ivory">
       <div class="wrap">
         <div class="section-head">
-          <div>
-            <span class="eyebrow">Наша миссия</span>
-            <h2 class="h2">Две идеи. Одна спортивная страна.</h2>
-          </div>
+          <h2 class="h2">Две идеи. Одна спортивная страна</h2>
         </div>
         <div class="ideas">
-          <div class="idea reveal">
-            <div class="idea-label">Государство</div>
-            <h3>Спорт как национальная идея</h3>
-            <p>Объединяет людей, регионы и поколения. Говорит на всех языках. Создаёт общую идентичность, гордость и чувство принадлежности.</p>
+          <div class="pcard idea reveal">
+            <div class="photo" data-photo="idea-state"></div>
+            <div class="pcard-body">
+              <span class="kicker">Государство</span>
+              <h3 class="pcard-title">Спорт как национальная идея</h3>
+              <p class="pcard-text">Объединяет людей, регионы и поколения. Говорит на всех языках. Создаёт общую идентичность, гордость и чувство принадлежности.</p>
+            </div>
           </div>
-          <div class="ideas-divider" aria-hidden="true"></div>
-          <div class="idea reveal">
-            <div class="idea-label">Человек</div>
-            <h3>Спорт как норма жизни</h3>
-            <p>Здоровье, семья, образование, досуг, городская среда и ежедневная привычка миллионов граждан России.</p>
+          <div class="pcard idea reveal">
+            <div class="photo" data-photo="idea-life"></div>
+            <div class="pcard-body">
+              <span class="kicker">Человек</span>
+              <h3 class="pcard-title">Спорт как норма жизни</h3>
+              <p class="pcard-text">Здоровье, семья, образование, досуг, городская среда и ежедневная привычка миллионов граждан России.</p>
+            </div>
           </div>
         </div>
-        <div class="ideas-result reveal">Усиливая индустрию — мы усиливаем страну</div>
+        <div class="ideas-result reveal">Усиливая индустрию — <span>мы усиливаем страну</span></div>
       </div>
     </section>
 
-    <!-- Ценность -->
+    <!-- Что получает индустрия (rgo.ru «Открываем Россию заново») -->
     <section class="section" id="members">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <span class="eyebrow">Ценность</span>
-            <h2 class="h2">Что получает профессиональная спортивная индустрия</h2>
-          </div>
-          <p class="lead">Выберите, кого вы представляете, — и посмотрите, чем Общество будет полезно именно вам.</p>
+      <div class="wrap intro">
+        <div class="intro-text">
+          <h2 class="h2">Что получает профессиональная спортивная индустрия</h2>
+          <p class="lead">Клубы и федерации, менеджеры и владельцы, компании и бренды, профессиональные спортсмены — выберите, кого вы представляете, и посмотрите, чем Общество полезно именно вам.</p>
+          <a class="btn btn-navy" href="join.html">Вступить в РСО</a>
         </div>
-        <div class="audience-grid" id="audience-grid"></div>
+        <div>
+          <div class="stagger" id="audience-grid"></div>
+          <div class="stagger-pad"></div>
+        </div>
       </div>
     </section>
 
@@ -231,51 +179,36 @@
     <section class="section section-ivory" id="partners">
       <div class="wrap">
         <div class="section-head">
-          <div>
-            <span class="eyebrow">Партнёры</span>
-            <h2 class="h2">Вместе делаем спорт сильнее</h2>
-          </div>
-          <a class="btn btn-navy" href="join.html?type=company" style="justify-self:end">Стать партнёром</a>
+          <h2 class="h2">Партнёры</h2>
+          <a class="more-link" href="join.html?type=company">Стать партнёром <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
         </div>
-
-        <!-- Замените .partner на <a class="partner" href="..."><img src="assets/img/partners/....png" alt="Название"></a> -->
-        <div class="partners-block">
-          <div class="partners-title">Партнёры</div>
-          <div class="partners">
-            <div class="partner">Место для партнёра</div>
-            <div class="partner">Место для партнёра</div>
-            <div class="partner">Место для партнёра</div>
-            <div class="partner">Место для партнёра</div>
-            <div class="partner">Место для партнёра</div>
-          </div>
+        <!-- Замените заглушку на <a class="partner" href="…"><img src="assets/img/partners/….png" alt="Название"></a> -->
+        <div class="partners">
+          <div class="partner">Логотип партнёра</div>
+          <div class="partner">Логотип партнёра</div>
+          <div class="partner">Логотип партнёра</div>
+          <div class="partner">Логотип партнёра</div>
+          <div class="partner">Логотип партнёра</div>
         </div>
-        <div class="partners-block">
-          <div class="partners-title">Информационные партнёры</div>
-          <div class="partners">
-            <div class="partner">Место для партнёра</div>
-            <div class="partner">Место для партнёра</div>
-            <div class="partner">Место для партнёра</div>
-            <div class="partner">Место для партнёра</div>
-            <div class="partner">Место для партнёра</div>
-          </div>
+        <h3 class="partners-title">Информационные партнёры</h3>
+        <div class="partners">
+          <div class="partner">Логотип партнёра</div>
+          <div class="partner">Логотип партнёра</div>
+          <div class="partner">Логотип партнёра</div>
+          <div class="partner">Логотип партнёра</div>
+          <div class="partner">Логотип партнёра</div>
         </div>
       </div>
     </section>
 
     <!-- Манифест -->
     <section class="section manifesto">
-      <img class="manifesto-mark" src="assets/img/logo-mark-light.png" alt="">
       <div class="wrap">
-        <div class="manifesto-grid reveal">
-          <div class="manifesto-word"><span>Русское</span><span>спортивное</span><span class="gold">общество</span></div>
-          <div class="manifesto-center">люди</div>
-          <div class="manifesto-word right"><span>Организации</span><span>Бизнес</span><span class="gold">Спорт</span></div>
+        <div class="manifesto-words reveal">
+          <span>Люди</span><i></i><span>Организации</span><i></i><span>Бизнес</span><i></i><span>Спорт</span>
         </div>
-        <div class="manifesto-claim reveal">
-          Наша цель
-          <strong>Крупнейшее спортивное сообщество в стране</strong>
-          <a class="btn btn-gold" href="join.html">Присоединиться</a>
-        </div>
+        <p class="manifesto-claim reveal">Наша цель — <b>крупнейшее спортивное сообщество в стране</b></p>
+        <a class="btn btn-gold" href="join.html">Присоединиться</a>
       </div>
     </section>
   </main>
