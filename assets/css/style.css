@@ -232,8 +232,10 @@ button, input, select, textarea { font: inherit; color: inherit; }
 @media (max-width: 1100px) {
   :root { --header-h: 70px; }
   .brand img { width: 52px; }
-  .burger { display: block; margin-left: 10px; }
+  .burger { display: block; flex: none; margin-left: 8px; }
   .lang-switch { margin-left: auto; }
+  .header-row { gap: 12px; }
+  .brand { min-width: 0; }
   .header-cta { display: none; }
   .nav {
     position: fixed;
@@ -253,6 +255,15 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .nav-open { overflow: hidden; }
   .nav-open .nav { transform: none; }
   .nav-open .site-header { background: var(--navy-deep); }
+}
+
+@media (max-width: 400px) {
+  .brand { gap: 8px; }
+  .brand img { width: 42px; }
+  .brand-name { font-size: 13px; letter-spacing: 0.08em; }
+  .brand-name small { font-size: 9.5px; letter-spacing: 0.24em; }
+  .lang-switch button { min-width: 32px; height: 32px; padding: 0 6px; font-size: 12px; }
+  .burger { width: 42px; height: 42px; }
 }
 
 /* ---------- Photo slots ---------- */
