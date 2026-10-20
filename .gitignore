@@ -2,9 +2,8 @@
 referencesofwebsite/
 prototypeRSS.pdf
 exportoftgchatRSS.html
+RSSlogo.jpg
+tools/make_logo.py
 *.pdf
 __pycache__/
 .env
-
-# Django backend — kept in its own private repo (shtankogoat/rusport-backend)
-backend/
