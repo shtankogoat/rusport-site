@@ -228,7 +228,7 @@
       var url = FORMS[type];
       box.innerHTML = url
         ? '<p class="gform-consent">Отправляя анкету, вы даёте согласие на обработку персональных данных в соответствии с ' +
-          '<a href="privacy.html" target="_blank">политикой конфиденциальности</a>.</p>' +
+          '<a href="privacy.html">политикой конфиденциальности</a>.</p>' +
           '<iframe data-type="' + type + '" src="' + esc(url + (url.indexOf("?") < 0 ? "?" : "&") + "embedded=true") + '" title="Анкета" loading="lazy">Загрузка…</iframe>' +
           '<p class="gform-alt"><a href="' + esc(url) + '" target="_blank" rel="noopener">Открыть анкету в новом окне ' + I.arrow + "</a></p>"
         : '<div class="empty-note"><b>Анкета скоро появится</b>А пока подпишитесь на наши каналы, чтобы не пропустить старт.' +
