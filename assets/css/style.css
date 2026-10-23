@@ -607,9 +607,9 @@ button, input, select, textarea { font: inherit; color: inherit; }
   transition: border-color 0.2s, background 0.2s;
 }
 .social:hover { border-color: var(--gold-light); background: rgba(255, 255, 255, 0.05); }
-.social svg { width: 16px; height: 16px; color: var(--gold-light); }
+.social svg { width: 16px; height: 16px; color: var(--white); }
 .socials-dark .social { border-color: var(--line); color: var(--navy); background: var(--white); }
-.socials-dark .social svg { color: var(--gold); }
+.socials-dark .social svg { color: var(--navy); }
 @media (max-width: 1023px) { .footer-main { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
 @media (max-width: 480px) { .footer-main { grid-template-columns: 1fr; } }
 
@@ -680,3 +680,10 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+/* Header socials (replace the former "Вступить" CTA) */
+.header-socials { display: flex; gap: 8px; min-height: 0; padding: 0; }
+.social-icon { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 50%; color: var(--white); transition: border-color 0.2s, background 0.2s; }
+.social-icon svg { width: 18px; height: 18px; color: var(--white); }
+.social-icon:hover { border-color: var(--gold-light); background: rgba(255, 255, 255, 0.08); }
+.nav .nav-join.socials { margin-top: 28px; }

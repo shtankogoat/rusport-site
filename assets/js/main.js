@@ -22,7 +22,7 @@
     arrow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 12h15M13 6l6 6-6 6"/></svg>',
     telegram: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.4 4.2 2.9 11.3c-1.3.5-1.3 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.1.9.8.9.5 0 .7-.2 1-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.2-15c.3-1.3-.5-1.9-1.6-1.6zM8.6 14.1l9.9-6.2c.5-.3.9-.1.5.2l-8.4 7.6-.3 3.6-1.7-5.2z"/></svg>',
     vk: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.8 17.5c-5.6 0-8.8-3.8-9-10.2h2.8c.1 4.7 2.2 6.6 3.8 7V7.3h2.6v4c1.6-.2 3.3-2 3.8-4h2.6c-.4 2.5-2.2 4.3-3.5 5 1.3.6 3.4 2.2 4.2 5.2h-2.9c-.6-1.9-2.2-3.4-4.2-3.6v3.6h-.2z"/></svg>',
-    max: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8.5"/><path d="M8 15.5V9l4 4 4-4v6.5"/></svg>'
+    max: '<svg viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd"><path d="M12.2 2.5c-5.4 0-9.4 3.9-9.4 9.4 0 2.1.5 4 1 5.4.3.9.4 1.6.1 2.6-.2.8.5 1.5 1.3 1.3 1-.3 1.8-.6 2.6-.3 1.3.6 2.8.9 4.4.9 5.3 0 9.3-4 9.3-9.5 0-5.6-3.9-9.8-9.3-9.8zm.1 5.1c-2.5 0-4.4 1.9-4.4 4.4s1.9 4.4 4.4 4.4 4.4-1.9 4.4-4.4-1.9-4.4-4.4-4.4z"/></svg>'
   };
 
   /* ---------- Photos ---------- */
@@ -52,6 +52,13 @@
     ["index.html#partners", "Партнёры"]
   ];
 
+  // Icon-only variant for the header. join.html is hidden (no links) but kept for later.
+  function socialIcons() {
+    return [["telegram", "Telegram"], ["vk", "ВКонтакте"], ["max", "MAX"]].map(function (s) {
+      return '<a class="social-icon" href="' + SOCIAL[s[0]] + '" target="_blank" rel="noopener" aria-label="' + s[1] + '" title="' + s[1] + '">' + I[s[0]] + "</a>";
+    }).join("");
+  }
+
   function socialLinks() {
     return (
       '<a class="social" href="' + SOCIAL.telegram + '" target="_blank" rel="noopener">' + I.telegram + "Telegram</a>" +
@@ -73,9 +80,9 @@
       NAV.map(function (n) {
         return '<a href="' + n[0] + '"' + (n[0] === page ? ' class="is-active"' : "") + ">" + n[1] + "</a>";
       }).join("") +
-      '<a class="btn btn-gold nav-join" href="join.html">Вступить в РСО</a>' +
+      '<div class="nav-join socials">' + socialLinks() + "</div>" +
       "</nav>" +
-      '<a class="btn btn-gold header-cta" href="join.html">Вступить</a>' +
+      '<div class="header-cta header-socials">' + socialIcons() + "</div>" +
       '<div class="lang-switch" role="group" aria-label="Язык / Language" data-no-i18n>' +
       '<button type="button" data-lang="ru"' + (LANG === "ru" ? ' class="is-active" aria-pressed="true"' : ' aria-pressed="false"') + ">РУ</button>" +
       '<button type="button" data-lang="en"' + (LANG === "en" ? ' class="is-active" aria-pressed="true"' : ' aria-pressed="false"') + ">EN</button>" +
@@ -116,7 +123,6 @@
       "<div><h4>Проекты</h4><ul>" + PROJECTS.slice(0, half).map(link).join("") + "</ul></div>" +
       '<div><h4 aria-hidden="true">&nbsp;</h4><ul>' + PROJECTS.slice(half).map(link).join("") + "</ul></div>" +
       "<div><h4>Обществу</h4><ul>" +
-      '<li><a href="join.html">Вступить в РСО</a></li>' +
       '<li><a href="index.html#members">Участникам</a></li>' +
       '<li><a href="index.html#partners">Партнёрам</a></li>' +
       '<li><a href="privacy.html">Политика конфиденциальности</a></li>' +
