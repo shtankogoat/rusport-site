@@ -80,7 +80,8 @@
     "РСО объединяет государство, бизнес и спорт вокруг конкретных проектов национального и регионального масштаба.": "RSO brings together the state, business and sport around concrete national and regional projects.",
 
     // Join band
-    "Вступить в Русское спортивное общество": "Join the Russian Sport Society",
+    "Следите за Русским спортивным обществом": "Follow the Russian Sport Society",
+    "Подпишитесь на нас, чтобы быть в курсе всех новостей и проектов Общества.": "Follow us to stay up to date with all the Society's news and projects.",
 
     // Two ideas
     "Две идеи. Одна страна": "Two ideas. One country",
